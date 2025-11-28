@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Stack(ABC):
     @abstractmethod
     def pop(self) -> int:
@@ -31,6 +32,6 @@ class Stack(ABC):
 
 
     @abstractmethod
-    def print_all(self) -> None:
+    def print_elements(self) -> None:
         """Вывод всех элементов стека"""
         

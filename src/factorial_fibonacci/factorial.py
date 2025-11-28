@@ -19,4 +19,4 @@ def factorial_recursive(n: int) -> int:
     
     return n * factorial_recursive(n - 1)
 
-print(factorial_recursive(1000))
+

@@ -1,18 +1,33 @@
-import matplotlib
-from src.app import full_cycle
+
+from src.app import app_full_cycle
 
 
 def main():
-    print("Что вы хотите запустить?:\n"
+    
+
+    while(True):
+        print("---------------------------------------------------\n"
+            "Что вы хотите запустить?:\n"
     "1: Алгоритмы сортировки\n"
     "2: Фибоначчи\n"
     "3: Факториал\n"
     "4: Стек через связный список\n"
-    "5: бенчмарк для алгоритмов сортировки\n")
-
-    while(True):
+    "5: бенчмарк для алгоритмов сортировки\n" 
+    "6: Визуализация эффективности алгоритмов сортировки\n" \
+    "---------------------------------------------------")
+    
         inp = input()
-        print(inp)
+        try:
+            app_full_cycle(inp)
+
+        except Exception as e:
+            print(f"Ошибка: {e}")
+
+        except KeyboardInterrupt:
+            print("Выполнение прервано")
+
+
+    
 
 
 if __name__ == "__main__":

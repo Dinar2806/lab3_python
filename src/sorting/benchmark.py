@@ -10,6 +10,9 @@ algos = {
     "counting sort": counting_sort,
     
 }
+float_algos = {
+    "bucket sort": bucket_sort
+}
 
 arrays = {
     # Случайные массивы разных размеров
@@ -41,6 +44,14 @@ arrays = {
     "reverse_sorted_range_500": reverse_sorted_with_range(500, 1, 5000),
     
 }
+float_arrays = {
+    "float_random_10": rand_float_array(10, seed=42),
+    "float_random_50": rand_float_array(50, seed=42),
+    "float_random_100": rand_float_array(100, seed=42),
+    "float_random_500": rand_float_array(500, seed=42),
+    "float_random_1000": rand_float_array(1000, seed=42),
+}
+
 
 def timeit_once(func, *args, **kwargs) -> float:
     start_time = time.perf_counter()
@@ -63,6 +74,6 @@ def benchmark_sorts(arrays: dict[str, list], algos: dict[str, callable]) -> dict
 
 benchmark = benchmark_sorts(arrays, algos)
 
-print(show_benchmark_results(benchmark))
+
 
         
