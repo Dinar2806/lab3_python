@@ -173,6 +173,5 @@ cd lab3_python
 pip install -r requirements.txt
 python -m src.main
 
-отчет бе
 
 
