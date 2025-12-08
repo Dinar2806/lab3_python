@@ -323,7 +323,10 @@ def app_full_cycle(inp: str):
             бенчмарк для алгоритмов сортировки
             """
             print(f"Вы выбрали {input}")
+            print("\n" + "ДЕТАЛЬНЫЙ АНАЛИЗ ПРОИЗВОДИТЕЛЬНОСТИ")
+            print("=" * 100)
             print(show_benchmark_results(benchmark))
+            print(show_benchmark_results(benchmark_float))
 
 
         case '6':

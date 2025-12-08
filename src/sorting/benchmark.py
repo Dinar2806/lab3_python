@@ -73,6 +73,7 @@ def benchmark_sorts(arrays: dict[str, list], algos: dict[str, callable]) -> dict
     return results
 
 benchmark = benchmark_sorts(arrays, algos)
+benchmark_float = benchmark_sorts(float_arrays, float_algos)
 
 
 

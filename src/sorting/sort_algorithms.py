@@ -78,7 +78,7 @@ def radix_sort(arr: List[int]) -> List[int]:
         
 
     
-def bucket_sort(arr: List[float], bucket_size: int) -> List[float]:
+def bucket_sort(arr: List[float], bucket_size: int = 5) -> List[float]:
     if len(arr) <= 1:
         return arr
     

@@ -83,8 +83,7 @@ def heapify(arr, n, i):
 
 
 def show_benchmark_results(benchmark_results):
-    print("\n" + "ДЕТАЛЬНЫЙ АНАЛИЗ ПРОИЗВОДИТЕЛЬНОСТИ")
-    print("=" * 100)
+    
     
     # Группируем по алгоритмам
     for algos_name in benchmark_results.keys():
