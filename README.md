@@ -36,6 +36,110 @@
     - При ошибке программа перехватывает соответствующее исключение и выводит сообщение об ошибке
     - При успешном выполнении пользователь получает результат операции
 
+
+* **отчет по бенчмарку**
+    - ДЕТАЛЬНЫЙ АНАЛИЗ ПРОИЗВОДИТЕЛЬНОСТИ
+
+# Алгоритм: bubble sort
+- 1 random_10                : 0.000017 сек
+- 2 random_50                : 0.000182 сек
+- 3 nearly_sorted_100_5      : 0.000376 сек
+- 4 many_duplicates_100_3    : 0.000488 сек
+- 5 random_unique_100        : 0.000589 сек
+- 6 random_100               : 0.000624 сек
+- 7 reverse_sorted_100       : 0.000762 сек
+- 8 reverse_sorted_range_100 : 0.000800 сек
+- 9 many_duplicates_500_5    : 0.015488 сек
+- 10 random_unique_500        : 0.018027 сек
+- 11 random_500               : 0.018772 сек
+- 12 reverse_sorted_range_500 : 0.022477 сек
+- 13 nearly_sorted_1000_10    : 0.046099 сек
+- 14 nearly_sorted_1000_50    : 0.050585 сек
+- 15 many_duplicates_1000_10  : 0.076827 сек
+- 16 random_1000              : 0.080689 сек
+- 17 reverse_sorted_1000      : 0.103185 сек
+- 18 random_5000              : 2.345575 сек
+
+# Алгоритм: heap sort
+- 1 random_10                : 0.000027 сек
+- 2 random_50                : 0.000098 сек
+- 3 many_duplicates_100_3    : 0.000159 сек
+- 4 reverse_sorted_100       : 0.000188 сек
+- 5 reverse_sorted_range_100 : 0.000192 сек
+- 6 nearly_sorted_100_5      : 0.000225 сек
+- 7 random_unique_100        : 0.000225 сек
+- 8 random_100               : 0.000228 сек
+- 9 many_duplicates_500_5    : 0.001279 сек
+- 10 reverse_sorted_range_500 : 0.001476 сек
+- 11 random_unique_500        : 0.001592 сек
+- 12 random_500               : 0.001619 сек
+- 13 many_duplicates_1000_10  : 0.003318 сек
+- 14 reverse_sorted_1000      : 0.003454 сек
+- 15 random_1000              : 0.003709 сек
+- 16 nearly_sorted_1000_50    : 0.003973 сек
+- 17 nearly_sorted_1000_10    : 0.004173 сек
+- 18 random_5000              : 0.025288 сек
+
+# Алгоритм: quick sort
+- 1 many_duplicates_100_3    : 0.000034 сек
+- 2 random_10                : 0.000040 сек
+- 3 random_50                : 0.000092 сек
+- 4 reverse_sorted_100       : 0.000137 сек
+- 5 reverse_sorted_range_100 : 0.000143 сек
+- 6 many_duplicates_500_5    : 0.000160 сек
+- 7 nearly_sorted_100_5      : 0.000169 сек
+- 8 random_100               : 0.000187 сек
+- 9 random_unique_100        : 0.000221 сек
+- 10 many_duplicates_1000_10  : 0.000555 сек
+- 11 reverse_sorted_range_500 : 0.000771 сек
+- 12 random_unique_500        : 0.001146 сек
+- 13 random_500               : 0.001226 сек
+- 14 reverse_sorted_1000      : 0.001643 сек
+- 15 nearly_sorted_1000_10    : 0.001822 сек
+- 16 nearly_sorted_1000_50    : 0.001923 сек
+- 17 random_1000              : 0.002369 сек
+- 18 random_5000              : 0.014909 сек
+
+# Алгоритм: radix sort
+- 1 random_10                : 0.000051 сек
+- 2 random_50                : 0.000127 сек
+- 3 many_duplicates_100_3    : 0.000147 сек
+- 4 nearly_sorted_100_5      : 0.000216 сек
+- 5 reverse_sorted_100       : 0.000219 сек
+- 6 reverse_sorted_range_100 : 0.000229 сек
+- 7 random_100               : 0.000240 сек
+- 8 random_unique_100        : 0.000241 сек
+- 9 many_duplicates_500_5    : 0.000785 сек
+- 10 many_duplicates_1000_10  : 0.001599 сек
+- 11 random_unique_500        : 0.001691 сек
+- 12 reverse_sorted_range_500 : 0.001719 сек
+- 13 random_500               : 0.001805 сек
+- 14 nearly_sorted_1000_10    : 0.003409 сек
+- 15 nearly_sorted_1000_50    : 0.003411 сек
+- 16 reverse_sorted_1000      : 0.003436 сек
+- 17 random_1000              : 0.004284 сек
+- 18 random_5000              : 0.023062 сек
+
+# Алгоритм: counting sort
+- 1 many_duplicates_100_3    : 0.000031 сек
+- 2 random_10                : 0.000036 сек
+- 3 reverse_sorted_100       : 0.000037 сек
+- 4 nearly_sorted_100_5      : 0.000039 сек
+- 5 many_duplicates_500_5    : 0.000067 сек
+- 6 many_duplicates_1000_10  : 0.000110 сек
+- 7 random_50                : 0.000125 сек
+- 8 random_100               : 0.000249 сек
+- 9 reverse_sorted_range_100 : 0.000250 сек
+- 10 random_unique_100        : 0.000266 сек
+- 11 reverse_sorted_1000      : 0.000370 сек
+- 12 nearly_sorted_1000_10    : 0.000371 сек
+- 13 nearly_sorted_1000_50    : 0.000380 сек
+- 14 random_unique_500        : 0.001237 сек
+- 15 reverse_sorted_range_500 : 0.001254 сек
+- 16 random_500               : 0.001261 сек
+- 17 random_1000              : 0.002549 сек
+- 18 random_5000              : 0.013056 сек
+
 * **Чему я научился:**
     - Реализации классических алгоритмов сортировки "с нуля"
     - Пониманию временной и пространственной сложности алгоритмов
@@ -69,5 +173,6 @@ cd lab3_python
 pip install -r requirements.txt
 python -m src.main
 
+отчет бе
 
 
