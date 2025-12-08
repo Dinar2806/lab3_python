@@ -64,7 +64,7 @@ class LinkedList(Stack):
         output = []
 
         while current_element is not None:
-            output.append(current_element)
+            output.append(current_element.value)
             current_element = current_element.next
 
         return output

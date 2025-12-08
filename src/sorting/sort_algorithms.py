@@ -6,19 +6,23 @@ from tests.tests_generate import *
 float_arr = [float(x) for x in [1,2,3,23,23,24,5,4,7,56,3,42,3,13,24,35,67,45,3,2,4,5464,5,45,34,23,34,5,23,235,34,5,24,45,2,34,36,63,67,2,34]]
 arr = [1,2,3,23,23,24,5,4,7,56,3,42,3,13,24,35,67,45,3,2,4,5464,5,45,34,23,34,5,23,235,34,5,24,45,2,34,36,63,67,2,34]
 
-def bubble_sort(arr: List[int]) -> List[int]:
-    length = len(arr)
-    while(True):
-        max_index = 0
-        for i in range(1, length):
-            if arr[i - 1] > arr[i]:
-                x = arr[i - 1]
-                arr[i - 1] = arr[i]
-                arr[i] = x
 
-                max_index = i
-        length = max_index
-        return arr
+
+def bubble_sort(arr: List[int]) -> List[int]:
+    n = len(arr)
+    sorted_arr = arr.copy()
+    
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if sorted_arr[j] > sorted_arr[j + 1]:
+                sorted_arr[j], sorted_arr[j + 1] = sorted_arr[j + 1], sorted_arr[j]
+                swapped = True
+        
+        if not swapped:
+            break
+    
+    return sorted_arr
 
 
 def quick_sort(arr: List[int]) -> List[int]:

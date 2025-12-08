@@ -117,9 +117,80 @@ def app_full_cycle(inp: str):
 
                     case _:
                         raise ValueError(f"Неизвестная команда {type_of_sort}")
-
+                    
             elif mode == "2":
-                pass
+                print("Введите ваш массив:\n")
+                if type_of_sort == "5":
+                    print("Вводите числа в диапазоне (0; 1]")
+
+                array = input().split(" ")
+                for i in range(len(array)):
+                    if type_of_sort == "5":
+                        if float(array[i]) > 1 or float(array[i]) <= 0:
+                            raise ValueError("Диапазон (0; 1]!") 
+                        else:
+                            array[i] = float(array[i])
+                    else:
+                        array[i] = int(array[i])
+                
+                match type_of_sort:
+                    case "1":
+                        array = array
+                        print(f"Исходный массив: {array}")
+                        start = time.perf_counter()
+                        print(f"Отсортированный массив: {bubble_sort(array)}")
+                        end = time.perf_counter()
+                        print(f"Время сортировки: {end - start} секунд")
+                        
+                    case "2":
+                        array = array
+                        print(f"Исходный массив: {array}")
+                        start = time.perf_counter()
+                        print(f"Отсортированный массив: {quick_sort(array)}")
+                        end = time.perf_counter()
+                        print(f"Время сортировки: {end - start} секунд")
+
+                    case "3":
+                        array = array
+                        print(f"Исходный массив: {array}")
+                        start = time.perf_counter()
+                        print(f"Отсортированный массив: {counting_sort(array)}")
+                        end = time.perf_counter()
+                        print(f"Время сортировки: {end - start} секунд")
+
+                    case "4":
+                        array = array
+                        print(f"Исходный массив: {array}")
+                        start = time.perf_counter()
+                        print(f"Отсортированный массив: {radix_sort(array)}")
+                        end = time.perf_counter()
+                        print(f"Время сортировки: {end - start} секунд")
+
+                    case "5":
+                        for i in range(len(array)):
+                            array[i] = float(array[i])
+                        array = array
+                        bucket = int(input("Укажите размер одного блока: "))
+                        print(f"Исходный массив: {array}")
+                        start = time.perf_counter()
+                        print(f"Отсортированный массив: {bucket_sort(array, bucket)}")
+                        end = time.perf_counter()
+                        print(f"Время сортировки: {end - start} секунд")
+
+                    case "6":
+                        array = array
+                        print(f"Исходный массив: {array}")
+                        start = time.perf_counter()
+                        print(f"Отсортированный массив: {heap_sort(array)}")
+                        end = time.perf_counter()
+                        print(f"Время сортировки: {end - start} секунд")
+                    
+
+                    case _:
+                        raise ValueError(f"Неизвестная команда {type_of_sort}")
+
+                
+        
 
             else:
                 raise ValueError(f"Неизвестная команда {mode}")
@@ -215,7 +286,20 @@ def app_full_cycle(inp: str):
                         print(stack.min())
                     case "7":
                         """print elements"""
-                        print(stack.print_elements())
+                        output_arr = stack.print_elements()
+                        
+                        for i in range(len(output_arr)):
+                            if i == 0:
+                                print(f"│ {output_arr[i]:^5} │ ← верх")
+                            elif i == len(output_arr) - 1:
+                                print(f"│ {output_arr[i]:^5} │ ← низ")
+                            else:
+                                print(f"│ {output_arr[i]:^5} │")
+                        print("└───────┘")
+
+                            
+                
+                            
                     case "info":
                         print("Выберите операцию над стеком:" \
                         "1: push\t" \
@@ -225,7 +309,8 @@ def app_full_cycle(inp: str):
                         "5: length\t" \
                         "6: min\t" \
                         "7: print elements\n" \
-                        "info: Показать это сообщение снова")
+                        "info: Показать это сообщение снова" \
+                        "exit: закончить работу со стеком")
                     case "exit":
                         break
                         
