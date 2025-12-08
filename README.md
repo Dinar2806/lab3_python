@@ -67,6 +67,7 @@
 git clone https://github.com/Dinar2806/lab3_python.git
 cd lab3_python
 pip install -r requirements.txt
+python -m src.main
 
 
 
